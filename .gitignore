@@ -1,0 +1,20 @@
+# env-file
+.env
+
+# dependencies
+node_modules/
+
+# cache
+.cache/
+
+# OS-specific metadata
+.DS_Store
+
+# compiled output 
+dist/
+
+# coverage reports
+coverage/
+
+# auto-generated
+.vscode/

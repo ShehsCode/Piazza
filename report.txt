@@ -1,0 +1,21 @@
+/* 
+~~~ Necessary packages were installed, leaving the following dependencies:
+- Express, a convenient framework to help with this use case for Node.js with robust features.
+- DotEnv, a useful module for simplifying configuration settings.
+- Mongoose, a library allowing us to quickly define data schema for ease of use.
+- Nodemon, which detects changes and allows us to automatically restart the server when they are applied.
+- JWT, for safe, digitally signed authentication and authorisation. 
+- JOI, library for data validation, often used synergistically with Express.
+- bcryptjs, a library that provides a means of hashing passwords for additional security.
+- body-parser, middleware which is useful for receiving and extracting data from the body of requests.
+
+~~~ .env file was created with the requisite address and password to allow connection to MongoDB;
+further: a .gitignore was created to hide the password information before pushing to repo, 
+and will be useful for hiding any additional sensitive information later.
+
+~~~ Constants added to app.js to ensure the correct modules are imported. Perfunctory status messages
+added.
+
+~~~ Schema defined in the User.JS file; subsequently created Validation.JS to ensure compliance on both
+registration and login.
+
