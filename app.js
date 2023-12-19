@@ -5,7 +5,12 @@ const app = express()
 const mongoose = require('mongoose')
 require('dotenv/config')
 
-// app.arguments('/api/auth', authRoute)
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+
+const userRoute = require('./routes/users')
+
+app.use('/user', userRoute)
 
 app.get('/', (req, res) => {
     res.send('You made it to the home page, good job!')
