@@ -30,4 +30,6 @@ like/dislike count, comment count.
 on posting.
 
 ~~~ Testing revealed significant issues which required debugging. Posts should now work
-as expected, rejecting anything outside of the schema (no valid category, no body to post, &c.)
+as expected, rejecting anything outside of the schema (no valid category, no body to post, &c.).
+
+~~~ Implemented like and dislike schema.
