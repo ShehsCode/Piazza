@@ -39,3 +39,5 @@ router.put('/like/:postId', verify, async (req, res) => {
         res.status(400).send({message:'The like count has had an issue. :S'})
     }
 })
+
+module.exports = router

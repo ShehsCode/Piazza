@@ -34,3 +34,4 @@ router.post('/commentmade/:postId', verify, async (req, res) => {
         res.status(400).send({message:'There was an issue with making your comment!'})
     }
 })
+module.exports = router

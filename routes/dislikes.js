@@ -39,3 +39,4 @@ router.put('/dislike/:postId', verify, async (req, res) => {
         res.status(400).send({message:'The dislike count has had an issue. :S'})
     }
 })
+module.exports = router
