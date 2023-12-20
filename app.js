@@ -14,6 +14,15 @@ app.use('/user', userRoute)
 const postRoute = require('./routes/posts')
 app.use('/posts', postRoute)
 
+const commentRoute = require('./routes/comments')
+app.use('/comments', commentRoute)
+
+const likeRoute = require('./routes/likes')
+app.use('/likes', likeRoute)
+
+const dislikeRoute = require('./routes/dislikes')
+app.use('/dislikes', dislikeRoute)
+
 app.get('/', (req, res) => {
     res.send('You made it to the home page, good job!')
 })

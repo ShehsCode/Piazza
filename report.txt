@@ -35,3 +35,5 @@ as expected, rejecting anything outside of the schema (no valid category, no bod
 ~~~ Implemented like and dislike schema.
 
 ~~~ Implemented comment schema.
+
+~~~ Fixed a minor issue with exports.

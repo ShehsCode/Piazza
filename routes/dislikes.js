@@ -1,4 +1,4 @@
-const verify = require('../verifyToken')
+const verify = require('../tokens')
 
 const express = require('express')
 const router = express.Router()
