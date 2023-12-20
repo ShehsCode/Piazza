@@ -23,3 +23,11 @@ registration and login.
 
 ~~~ Post schema added: title, category, timestamp, status, owner (with name nested), expiration, body, 
 like/dislike count, comment count. 
+
+~~~ Token.js added (credit to YouTube user CloudTV for this c:).
+
+~~~ Validation file edited to include post validation. Post body, category, and title are all checked
+on posting.
+
+~~~ Testing revealed significant issues which required debugging. Posts should now work
+as expected, rejecting anything outside of the schema (no valid category, no body to post, &c.)

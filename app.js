@@ -9,8 +9,10 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
 const userRoute = require('./routes/users')
-
 app.use('/user', userRoute)
+
+const postRoute = require('./routes/posts')
+app.use('/posts', postRoute)
 
 app.get('/', (req, res) => {
     res.send('You made it to the home page, good job!')

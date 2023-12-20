@@ -2,6 +2,11 @@
 const mongoose = require('mongoose')
 
    const postSchema = mongoose.Schema({
+       post_owner:{
+           type:mongoose.Schema.Types.ObjectId, 
+           ref: "User",
+           require:true,
+       },
        post_title:{
            type:String,
            require:true,
@@ -26,17 +31,6 @@ const mongoose = require('mongoose')
            type:Number,
            min:5,
            max:60,
-       },
-       post_owner:{
-        user_id:{
-           type:mongoose.Schema.Types.ObjectId, 
-           ref: "User",
-           require:true,
-        },
-        post_owner_name:{
-           type:String,
-           required:true,
-        },
        },
        post_body:{
            type:String,

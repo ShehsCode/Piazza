@@ -17,5 +17,16 @@ const loginValidation = (data) => {
     return userValidation.validate(data)
 }
 
+const postValidation = (data) => {
+    const validation = joi.object({
+        post_title: joi.string().required().min(3).max(64),
+        post_category: joi.array().items(joi.string().valid('Politics', 'Health', 'Sport', 'Tech')).required(),
+        post_body: joi.string().required().min(3).max(256),
+
+    })
+    return validation.validate(data)
+}
+
 module.exports.registerValidation = registerValidation
 module.exports.loginValidation = loginValidation
+module.exports.postValidation = postValidation
