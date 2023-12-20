@@ -33,3 +33,5 @@ on posting.
 as expected, rejecting anything outside of the schema (no valid category, no body to post, &c.).
 
 ~~~ Implemented like and dislike schema.
+
+~~~ Implemented comment schema.
