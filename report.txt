@@ -19,3 +19,5 @@ added.
 ~~~ Schema defined in the User.JS file; subsequently created Validation.JS to ensure compliance on both
 registration and login.
 
+~~~ Tests run, connection established, test registration and login for dummy user working correctly.
+

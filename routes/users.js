@@ -53,13 +53,13 @@ router.post('/login', async (req, res) => {
     }
 
     // Is the password correct?
-    const passwordValid = await bcryptjs.compare(req.body.password, user.password)
+    const passwordValid = await bcryptjs.compare(req.body.password, userExtant.password)
     if(!passwordValid){
         return res.status(400).send({message:'This password is incorrect! >:('})
     }
     
     // Upon successful login, generate token.
-    const token = jsonwebtoken.sign({_id: user._id}, process.env.SUPERSECRET_TOKEN)
+    const token = jsonwebtoken.sign({_id: userExtant._id}, process.env.SUPERSECRET_TOKEN)
     res.header('auth-token', token).send({'auth-token': token, 'message':'You are now logged in! :)'})
 })
 
