@@ -21,3 +21,5 @@ registration and login.
 
 ~~~ Tests run, connection established, test registration and login for dummy user working correctly.
 
+~~~ Post schema added: title, category, timestamp, status, owner (with name nested), expiration, body, 
+like/dislike count, comment count. 
