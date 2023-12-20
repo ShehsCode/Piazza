@@ -26,7 +26,7 @@ router.put('/dislike/:postId', verify, async (req, res) => {
     })
 
     try{
-        const extantDisike = await newDislike.save()
+        const extantDislike = await newDislike.save()
         res.send({extantDislike, message:'Good job disliking this post!'})
     }catch(err){
         res.status(400).send({message:'You could not dislike this post.'})
