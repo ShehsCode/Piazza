@@ -15,24 +15,24 @@
 
 {
     "username": "Bella",
-    "email":"vamps_r_cute@hotmail.com"
+    "email":"vamps_r_cute@hotmail.com",
     "password":"ilikeedward"
 }
 
 {
     "username": "Edward",
-    "email":"inconspicuous_vegetarian@protonmail.com
+    "email":"inconspicuous_vegetarian@protonmail.com",
     "password":"skin0f4filler"
 }
 
 {
-    "username": "Alice"
-    "email":"alice_cullen@gmail.com"
+    "username": "Alice",
+    "email":"alice_cullen@gmail.com",
     "password":"jacksonrathbone"
 }
 
 {
-    "username": "Aro"
-    "email":"aro_volturi@aol.com"
+    "username": "Aro",
+    "email":"aro_volturi@aol.com",
     "password":"password123"
 }
