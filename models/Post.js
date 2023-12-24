@@ -65,7 +65,7 @@ const mongoose = require('mongoose')
                 required: true,
             },
             time_left_to_expire: {
-                type: Number,  // You may adjust the type as needed
+                type: Number,  // We can change this to Date if necessary.
             },
         },
     ],
