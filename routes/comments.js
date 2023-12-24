@@ -31,6 +31,8 @@ router.post('/commentmade/:postId', verify, async (req, res) => {
         comment_post: req.params.postId,
         comment_body: req.body.comment_body,
         comment_owner: req.user._id,
+        interaction_value: 'comment',
+        time_left_to_expire: post.expirationTime ? post.expirationTime - new Date() : null,
     })
     try {
         const extantComment = await comment.save()
