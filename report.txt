@@ -42,3 +42,6 @@ as expected, rejecting anything outside of the schema (no valid category, no bod
 by adding appropriate parameters to compare in an If loop.
 
 ~~~ Updated likes and dislikes to prevent post owners from liking and disliking their own posts.
+
+~~~ Added expiration checks in comments.js, likes.js, and dislikes.js to prevent users from
+interacting with posts which have already expired.

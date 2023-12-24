@@ -21,6 +21,11 @@ router.post('/commentmade/:postId', verify, async (req, res) => {
         return res.status(400).send({message:"There's a problem with the validity of your comment!"})
     }
 
+     // Has the post expired?
+    if (post.post_status === 'Expired') {
+        return res.status(400).send({ message: 'You cannot comment on an expired post! :o' });
+    }
+
     // Here is the actual commenting.
     const comment = new Comment({
         comment_post: req.params.postId,

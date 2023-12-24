@@ -24,6 +24,11 @@ router.put('/like/:postId', verify, async (req, res) => {
         return res.status(400).send({message:'Hey! Stop trying to like a post more than once! >:('})
     }
 
+    // Has the post expired?
+    if (post.post_status === 'Expired') {
+    return res.status(400).send({ message: 'You cannot comment on an expired post! :o' });
+    }
+
     // Here is the actual liking of the post.
     const newLike = new Like({
         like_owner: req.user._id,

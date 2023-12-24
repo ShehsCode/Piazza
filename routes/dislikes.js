@@ -17,10 +17,16 @@ router.put('/dislike/:postId', verify, async (req, res) => {
     if (post.post_owner.toString() === req.user._id.toString()) {
     return res.status(400).send({ message: 'You cannot dislike your own post! :c' });
     }
+
     // Has the user disliked the post already?
     const dislike = await Dislike.findOne({dislike_owner: req.user._id, dislike_post: req.params.postId})
     if(dislike){
         return res.status(400).send({message:'Hey! Stop trying to dislike a post more than once! >:('})
+    }
+
+    // Has the post expired?
+    if (post.post_status === 'Expired') {
+    return res.status(400).send({ message: 'You cannot comment on an expired post! :o' });
     }
 
     // Here is the actual disliking of the post.
