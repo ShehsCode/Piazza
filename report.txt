@@ -37,3 +37,8 @@ as expected, rejecting anything outside of the schema (no valid category, no bod
 ~~~ Implemented comment schema.
 
 ~~~ Fixed a minor issue with exports.
+
+~~~ Added logic for checking post status and post expiration time based on when a post was made,
+by adding appropriate parameters to compare in an If loop.
+
+~~~ TO DO: Add sorting criteria for posts.

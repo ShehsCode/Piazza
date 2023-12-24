@@ -51,5 +51,29 @@ const mongoose = require('mongoose')
            default:0,
        }
    })
+
+   /* For posts to expire properly, we need the following logic.*/
+
+   postSchema.virtual('expirationTime').get(function () {
+    if (this.post_expiration && this.post_status === 'Live') {
+        const expirationTimestamp = new Date(this.post_timestamp);
+        expirationTimestamp.setMinutes(expirationTimestamp.getMinutes() + this.post_expiration);
+        return expirationTimestamp;
+    }
+    return null;
+   });
+
+   /* The following will update post status accordingly depending on expiration time */
+
+   postSchema.pre('save', function (next) {
+    if (this.post_expiration && this.post_status === 'Live') {
+        const now = new Date();
+        const expirationTime = this.expirationTime;
+        if (expirationTime && now >= expirationTime) {
+            this.post_status = 'Expired';
+        }
+    }
+    next();
+   });
    
    module.exports = mongoose.model('posts', postSchema)

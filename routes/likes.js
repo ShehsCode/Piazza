@@ -13,6 +13,11 @@ router.put('/like/:postId', verify, async (req, res) => {
         return res.status(400).send({message:'This user is trying to like something that is not there! :S'})
     }
 
+    // Is the user trying to like their own post?
+    if (post.post_owner.toString() === req.user._id.toString()) {
+    return res.status(400).send({ message: 'You cannot like your own post! :c' });
+    }
+
     // Has the user liked the post already?
     const like = await Like.findOne({like_owner: req.user._id, like_post: req.params.postId})
     if(like){

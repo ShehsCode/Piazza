@@ -1,0 +1,38 @@
+---
+
+{
+    "username": "Geoff",
+    "email":"geoffboy1@gmail.com",
+    "password":"geoffisc00l"
+}
+
+{
+    "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTgyMmNiOTc4MjNiNTA3ZmFkODQ0ZmMiLCJpYXQiOjE3MDMwMzAzOTR9.8iEbDuYee26bn7zkBob0ZDx1e2PNfduvT39isAe3nMo",
+    "message": "You are now logged in! :)"
+}
+
+---
+
+{
+    "username": "Bella",
+    "email":"vamps_r_cute@hotmail.com"
+    "password":"ilikeedward"
+}
+
+{
+    "username": "Edward",
+    "email":"inconspicuous_vegetarian@protonmail.com
+    "password":"skin0f4filler"
+}
+
+{
+    "username": "Alice"
+    "email":"alice_cullen@gmail.com"
+    "password":"jacksonrathbone"
+}
+
+{
+    "username": "Aro"
+    "email":"aro_volturi@aol.com"
+    "password":"password123"
+}
