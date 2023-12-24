@@ -49,7 +49,26 @@ const mongoose = require('mongoose')
        comment_count:{
            type:Number,
            default:0,
-       }
+       },
+    
+    // User interaction schema are here!
+    interactions: [
+        {
+            user: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
+                required: true,
+            },
+            interaction_value: {
+                type: String,
+                enum: ['like', 'dislike', 'comment'],
+                required: true,
+            },
+            time_left_to_expire: {
+                type: Number,  // You may adjust the type as needed
+            },
+        },
+    ],
    })
 
    /* For posts to expire properly, we need the following logic.*/
