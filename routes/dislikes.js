@@ -13,6 +13,10 @@ router.put('/dislike/:postId', verify, async (req, res) => {
         return res.status(400).send({message:'This user is trying to dislike something that is not there! :S'})
     }
 
+    // Is the owner of the post trying to dislike their own post?
+    if (post.post_owner.toString() === req.user._id.toString()) {
+    return res.status(400).send({ message: 'You cannot dislike your own post! :c' });
+    }
     // Has the user disliked the post already?
     const dislike = await Dislike.findOne({dislike_owner: req.user._id, dislike_post: req.params.postId})
     if(dislike){
